@@ -1,0 +1,24 @@
+header {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    box-shadow: 3px 3px 5px grey;
+}
+
+img {
+    width:4%;
+    margin-top:0.5%;
+    margin-bottom: 0.5%;
+}
+
+a {
+    padding: 40px;
+    text-decoration: none;
+    color:black;
+    margin-bottom:1%;
+}
+
+a:hover {
+    color:hotpink;
+}
