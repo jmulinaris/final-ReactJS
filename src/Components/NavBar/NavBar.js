@@ -1,22 +1,24 @@
 import React from "react";
-import logo from "../../assets/logoTienda.png"
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import logo from "../../assets/logoTienda.png";
+import CartWidget from "../CartWidget/CartWidget";
 import "./NavBar.css"
 
 const NavBar = () =>{
     return (
         <header>
-            <img src ={logo} alt ="logo" />
-                <nav>
-                    <a href =""> Pastas </a>
-                    <a href =""> Pizzas</a>
-                    <a href =""> Panificación</a>
-                    <a href =""> Empanadas</a>
-                    <a href =""> Frutas </a>
-                    <a href =""> Verduras </a>
-                    <a href =""> Carnes </a>
+            <a className="nombre" href ="#"> FRÖZEN </a>
+                <nav className="nav">
+                    <ul className="nav__list">
+                        <li><a className="nav__link" href ="#"> Pastas </a></li>
+                        <li><a className="nav__link" href ="#"> Pizzas</a></li>
+                        <li><a className="nav__link" href ="#"> Panificación</a></li>
+                        <li><a className="nav__link" href ="#"> Empanadas</a></li>
+                        <li><a className="nav__link" href ="#"> Frutas </a></li>
+                        <li><a className="nav__link" href ="#"> Verduras </a></li>
+                        <li><a className="nav__link" href ="#"> Carnes </a></li>
+                    </ul>
                 </nav>
-            <ShoppingCartIcon fontSize="large"/>
+                <CartWidget />
         </header>
     )
 }

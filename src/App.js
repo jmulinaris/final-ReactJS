@@ -1,9 +1,13 @@
 import React from "react";
-import Header from "./Components/NavBar/NavBar"
+import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
+import NavBar from "./Components/NavBar/NavBar"
 
 const App = () => {
   return (
-    <Header />
+    <>
+      <NavBar />
+      <ItemListContainer texto="Bienvenido a la tienda online"/>
+    </>
   )
 }
 
