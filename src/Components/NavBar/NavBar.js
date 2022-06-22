@@ -6,7 +6,7 @@ import "./NavBar.css"
 const NavBar = () =>{
     return (
         <header>
-            <a className="nombre" href ="#"> FRÖZEN </a>
+            <a className="nombre" href ="#"> FRÖZEN</a>
                 <nav className="nav">
                     <ul className="nav__list">
                         <li><a className="nav__link" href ="#"> Pastas </a></li>
