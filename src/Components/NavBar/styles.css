@@ -16,7 +16,6 @@ header {
     list-style: none;
     display:flex;
     justify-content: space-around;
-    flex-wrap: nowrap;
 }
 
 ul li{

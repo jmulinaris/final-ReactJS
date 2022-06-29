@@ -1,0 +1,22 @@
+.card {
+    display:flex;
+    display:inline-block;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin:2%;
+    width:15%;
+    text-align: center;
+    border:solid grey;
+    border-radius: 4%;
+}
+
+.card img{
+    width:60%;
+    height:auto;
+}
+
+.boton-comprar{
+    padding:2%;
+    margin:2%;
+}
