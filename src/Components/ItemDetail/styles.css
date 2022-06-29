@@ -1,0 +1,20 @@
+.container {
+    width:98%;
+    margin:auto;
+}
+
+.titulo-detalle {
+    text-align: center;
+    color:rgb(148, 3, 3);
+    margin-top:4%;
+}
+
+.nombre-producto{
+    color:rgb(148, 3, 3);
+    margin-top:4%;
+}
+
+.imagen-detalle{
+    width:30%;
+    border: solid black;
+}
