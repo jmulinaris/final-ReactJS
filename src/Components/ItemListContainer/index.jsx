@@ -1,22 +1,30 @@
 import React, {useState, useEffect} from "react";
-import ItemCount from "../ItemCount";
 import ItemList from "../ItemList";
 import { BeatLoader } from "react-spinners";
-import { getData } from "../../Mocks/fakeApi";
+import { getProducts } from "../../Mocks/fakeApi";
+import { useParams } from "react-router-dom";
 import "./styles.css"
 
 
 const ItemListContainer = ({greeting}) =>{
     const [productList, setProductList] = useState ([]);
-
     const [loading, setLoading] = useState(true);
 
+    const {categoryId} = useParams()
+
     useEffect(()=>{
-        getData
-        .then (res => setProductList(res))
-        .catch ((error)=>console.log(error))
-        .finally(()=>setLoading(false))
-    }, [])
+        setLoading(true);
+        getProducts (categoryId)
+        .then ((res) => {
+            setProductList(res);
+        })
+        .catch ((error)=>{
+            console.log(error);
+        })
+        .finally(()=> {
+            setLoading(false);
+        })
+    }, [categoryId])
 
     const onAdd = (quantity) => {
         console.log(`Agreaste al carrito ${quantity} unidades del producto`);
@@ -25,8 +33,9 @@ const ItemListContainer = ({greeting}) =>{
     return (
         <div>
             <h1 className="titulo">{greeting}</h1>
-            <ItemCount initial={1} stock={7} onAdd={onAdd} />
-            {loading ? <BeatLoader className="spinner" color="rgb(236, 114, 114)" cssOverride={{display:"flex", justifyContent:"center", marginTop:"5%"}}/> : <ItemList productList={productList}/>}
+            {loading ?
+            <BeatLoader className="spinner" color="rgb(236, 114, 114)" cssOverride={{display:"flex", justifyContent:"center", marginTop:"5%"}}/> 
+            : <ItemList productList={productList}/>}
         </div>
     )
 }

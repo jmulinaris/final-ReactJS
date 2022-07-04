@@ -1,23 +1,39 @@
 import React, {useState, useEffect} from 'react'
 import ItemDetail from '../ItemDetail'
 import "./styles.css"
-
-const product = {id:1, name:"Tallarines", price:250, stock:36, image:"https://i.postimg.cc/fTsD38db/tallarines.jpg"};
+import {getProduct} from "../../Mocks/fakeApi"
+import { useParams } from 'react-router-dom'
+import { BeatLoader } from "react-spinners";
 
 const ItemDetailContainer = () => {
-    const [productDetail, setProductDetail] = useState({});
+    const [product, setProduct] = useState({});
+    const [loading, setLoading] = useState(true);
+
+    const {id} = useParams();
 
     useEffect(()=>{
-            const getData = new Promise (resolve =>{
-            setTimeout(() => {
-                resolve(product)
-            }, 3000);
+        getProduct (id)
+        .then((res)=>{
+            setProduct (res);
+        })
+        .catch((error) =>{
+            console.log(error);
+        })
+        .finally(() =>{
+            setLoading(false);
         });
-        getData.then(res=> setProductDetail (res));
-    },[])
+    },[id])
 
     return (
-        <ItemDetail productDetail={productDetail}/>
+        <div>
+            {loading ? (
+                <BeatLoader className="spinner" color="rgb(236, 114, 114)" cssOverride={{display:"flex", justifyContent:"center", marginTop:"5%"}}/>
+            ) : (
+                <>
+                    <ItemDetail product={product}/>
+                </>
+            )}
+        </div>
     )
 }
 

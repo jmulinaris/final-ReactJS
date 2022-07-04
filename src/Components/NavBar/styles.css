@@ -15,14 +15,15 @@ header {
 .nav__list{
     list-style: none;
     display:flex;
+    flex-direction: row;
     justify-content: space-around;
 }
 
-ul li{
+.link {
     margin-left:15%;
 }
 
-ul li :hover{
+ul :hover{
     color:black;
 }
 

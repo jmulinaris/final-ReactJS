@@ -1,19 +1,46 @@
 import React from "react";
 import CartWidget from "../CartWidget/index";
+import {Link} from "react-router-dom";
 import "./styles.css"
 
+const categories = [,
+    {
+        id:1,
+        path:"/category/pastas",
+        name:"Pastas"
+    },
+    {
+        id:2,
+        path:"/category/pizzas",
+        name:"Pizzas"
+    },
+    {
+        id:3,
+        path:"/category/empanadas",
+        name:"Empanadas"
+    },
+    {
+        id:4,
+        path:"/category/frutas",
+        name:"Frutas"
+    },
+    {
+        id:5,
+        path:"/category/verduras",
+        name:"Verduras"
+    },
+];
+
 const NavBar = () =>{
+
     return (
         <header>
-            <a className="nombre" href ="#"> FRÖZEN</a>
+            <Link className="nombre" to="/"> FRÖZEN</Link>
                 <nav className="nav">
                     <ul className="nav__list">
-                        <li><a className="nav__link" href ="#"> Pastas </a></li>
-                        <li><a className="nav__link" href ="#"> Pizzas</a></li>
-                        <li><a className="nav__link" href ="#"> Panificación</a></li>
-                        <li><a className="nav__link" href ="#"> Empanadas</a></li>
-                        <li><a className="nav__link" href ="#"> Frutas </a></li>
-                        <li><a className="nav__link" href ="#"> Verduras </a></li>
+                        {categories.map((category) => (
+                            <Link className="link" to={category.path} key={category.id}>{category.name}</Link>
+                        ))}
                     </ul>
                 </nav>
                 <CartWidget />

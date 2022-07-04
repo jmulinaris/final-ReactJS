@@ -5,7 +5,8 @@
     align-items: center;
     flex-wrap: wrap;
     margin:2%;
-    width:15%;
+    width:18%;
+    padding:1%;
     text-align: center;
     border:solid grey;
     border-radius: 4%;
@@ -16,7 +17,9 @@
     height:auto;
 }
 
-.boton-comprar{
+.boton-detalle{
     padding:2%;
-    margin:2%;
+    margin:30%;
+    color:black;
+    border: double grey;
 }
