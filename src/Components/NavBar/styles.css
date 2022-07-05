@@ -24,7 +24,7 @@ header {
 }
 
 ul :hover{
-    color:black;
+    color:black;;
 }
 
 .nombre{
@@ -36,5 +36,14 @@ ul :hover{
 a {
     text-decoration: none;
     color:white;
+}
+
+.carrito{
+    margin-right:2%;
+    cursor:pointer;
+}
+
+.carrito :hover{
+    color:black;
 }
 

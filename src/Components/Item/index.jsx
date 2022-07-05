@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import "./styles.css"
 
 
 const Item = ({product}) => {
@@ -9,11 +8,13 @@ const Item = ({product}) => {
             <img src={product.image} alt="{product.name}" />
             <div className="info-product">
                 <p>{product.name}</p>
-                <p>${product.price}</p>
+                <p><b>Precio: ${product.price}</b></p>
             </div>
-            <Link className='boton-detalle' to={`/detail/${product.id}`}>
+            <button className='boton-detalle'>
+                <Link to={`/detail/${product.id}`}>
                 VER DETALLE
-            </Link>
+                </Link>
+            </button>
         </div>
     )
 }

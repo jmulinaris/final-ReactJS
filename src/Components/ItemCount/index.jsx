@@ -1,6 +1,5 @@
-import "./styles.css";
-
 import React, {useEffect, useState} from 'react'
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 const ItemCount = ({initial, stock, onAdd}) => {
 
@@ -19,15 +18,17 @@ const ItemCount = ({initial, stock, onAdd}) => {
     }, [initial])
 
     return (
-        <div className="counter">
-            <button disabled={count <= 1} onClick={decrease}>-</button>
-            <span className="numero">{count}</span>
-            <button disabled={count >= stock} onClick={increase}>+</button>
-            <div>
-                <p>Stock: {stock}</p>
+        <div>
+            <div className="counter">
+            <section>
+                    <button className="counter-button" disabled={count <= 1} onClick={decrease}>-</button>
+                    <span className="numero">{count}</span>
+                    <button className="counter-button" disabled={count >= stock} onClick={increase}>+</button>
+            </section>
+                <p>({stock} disponibles)</p>
             </div>
             <div>
-                <button disabled={stock <= 0} onClick={()=> onAdd(count)}> Agregar al carrito</button>
+                <button className="add-button" disabled={stock <= 0} onClick={()=> onAdd(count)}> <AddShoppingCartIcon className="addCarrito" fontSize="small"/>AGREGAR AL CARRITO</button>
             </div>
         </div>
     )

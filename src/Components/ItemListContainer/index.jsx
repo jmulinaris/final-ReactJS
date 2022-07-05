@@ -34,7 +34,7 @@ const ItemListContainer = ({greeting}) =>{
         <div>
             <h1 className="titulo">{greeting}</h1>
             {loading ?
-            <BeatLoader className="spinner" color="rgb(236, 114, 114)" cssOverride={{display:"flex", justifyContent:"center", marginTop:"5%"}}/> 
+            <BeatLoader className="spinner" color="rgb(236, 114, 114)" cssOverride={{display:"flex", justifyContent:"center", marginTop:"5%"}}/>
             : <ItemList productList={productList}/>}
         </div>
     )
