@@ -1,6 +1,15 @@
-## Info general
+## Ecommcerce FRÖZEN
 ***
-E-commerce de FRÖZEN, tienda de congelados
+Coder House: Proyecto final de React
+Tienda virtual para comprar alimentos congelados
+
+## Alcance
+***
+* NavBar que contiene dos componentes:  NavBar y CartWidget.
+* Componente ItemCount que permite aumentar y disminuir la cantidad a comprar, teniendo en cuenta el stock disponible.
+* Componente ItemListContainer que renderiza el listado de productos. Se muestran las cards dinámicamente usando mapping y una promise manual.
+* Componente ItemDetailContainer que muestra el detalle de cada producto.
+
 
 ## Tecnologías
 ***
