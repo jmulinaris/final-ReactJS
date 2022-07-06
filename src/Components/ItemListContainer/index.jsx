@@ -26,10 +26,6 @@ const ItemListContainer = ({greeting}) =>{
         })
     }, [categoryId])
 
-    const onAdd = (quantity) => {
-        console.log(`Agreaste al carrito ${quantity} unidades del producto`);
-    }
-
     return (
         <div>
             <h1 className="titulo">{greeting}</h1>

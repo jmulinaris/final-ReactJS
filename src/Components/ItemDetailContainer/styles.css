@@ -62,3 +62,14 @@
     margin:2%;
     cursor:pointer;
 }
+
+.finish-button{
+    border-radius: 2%;
+    border: solid rgb(174, 164, 230);
+    padding:0.5%;
+    color:white;
+    background-color: rgb(127, 110, 228);
+    padding:0.5%;
+    margin:2%;
+    cursor:pointer;
+}
