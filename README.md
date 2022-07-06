@@ -1,6 +1,8 @@
 ## Ecommcerce FRÖZEN
 ***
 Coder House: Proyecto final de React
+
+
 Tienda virtual para comprar alimentos congelados
 
 ## Alcance
