@@ -12,6 +12,7 @@ Tienda virtual para comprar alimentos congelados
 * Componente ItemListContainer que renderiza el listado de productos. Se muestran las cards dinámicamente usando mapping y una promise manual.
 * Componente ItemDetailContainer que muestra el detalle de cada producto.
 * Se agrega funcionalidad al botón agregar al carrito, al apretar desaparece y aparece otro botón finalizar compra que lleva al Cart.
+* Se crea el CartContext y funciones para agregar/eliminar productos del Cart.
 
 
 ## Tecnologías

@@ -38,12 +38,16 @@ a {
     color:white;
 }
 
-.carrito{
-    margin-right:2%;
-    cursor:pointer;
+
+.cart{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    margin:2%;
 }
 
 .carrito :hover{
     color:black;
 }
+
 
