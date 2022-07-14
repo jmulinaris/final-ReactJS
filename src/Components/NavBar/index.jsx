@@ -43,7 +43,7 @@ const NavBar = () =>{
                         ))}
                     </ul>
                 </nav>
-                <CartWidget />
+                <Link className="cart" to="/cart"> <CartWidget /> </Link>
         </header>
     )
 }

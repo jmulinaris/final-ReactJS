@@ -38,16 +38,63 @@ a {
     color:white;
 }
 
-
 .cart{
     display:flex;
     flex-direction: row;
     align-items: center;
     margin:2%;
+    cursor:pointer;
 }
 
 .carrito :hover{
     color:black;
 }
 
+.cart-link{
+    color:red;
+}
 
+.cart-title{
+    text-align: center;
+}
+
+.cart-detail{
+    display:grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-auto-flow: column;
+    margin: 2% 20%;
+    border:solid rgb(194, 191, 191);
+    text-align: center;
+}
+
+.cart-resume {
+    display:grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto;
+    grid-auto-flow: column;
+    text-align:center;
+    margin: 0% 20%;
+    padding: 0 15%;
+    border:solid rgb(194, 191, 191);
+}
+
+.delete-button{
+    cursor:pointer;
+    color:var(--main-color);
+    display:grid;
+    grid-template-columns: 100%;
+}
+
+.clear-button{
+    cursor:pointer;
+    width:70%;
+    height: 50%;
+    margin-top:7%;
+    background-color:var(--main-color);
+    color:white;
+    border-radius: 2rem;
+    font-style: italic;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}

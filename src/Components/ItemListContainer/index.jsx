@@ -3,6 +3,8 @@ import ItemList from "../ItemList";
 import { BeatLoader } from "react-spinners";
 import { getProducts } from "../../Mocks/fakeApi";
 import { useParams } from "react-router-dom";
+import { db } from "../../firebase/firebase"
+import { getDocs, collection, query } from "firebase/firestore"
 import "./styles.css"
 
 

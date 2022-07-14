@@ -9,7 +9,7 @@ const CartWidget = () =>{
     return (
         <div className="cart">
             <ShoppingCartIcon className="carrito" fontSize="large"/>
-            <p className="counterCart">{quantityProducts}</p>
+            <p className="counterCart">{quantityProducts || ""}</p>
         </div>
     )
 }
