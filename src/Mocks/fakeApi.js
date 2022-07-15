@@ -71,7 +71,8 @@ const products = [
         category:"empanadas",
         description:"Empanadas de carne x 4 unidades"
     },
-        {id:9,
+    {
+        id:9,
         name:"Empanadas de pollo",
         price:490,
         stock:7,
