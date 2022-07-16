@@ -14,6 +14,7 @@ Tienda virtual para comprar alimentos congelados
 * Se agrega funcionalidad al botón agregar al carrito, al apretar desaparece y aparece otro botón finalizar compra que lleva al Cart.
 * Se crea el CartContext y funciones para agregar/eliminar productos del Cart.
 * Se crea la vista del Cart
+* Dejo de usar la fakeApi y traigo los datos de productos con firebase
 
 
 ## Tecnologías

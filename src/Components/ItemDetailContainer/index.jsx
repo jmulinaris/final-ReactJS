@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import ItemDetail from '../ItemDetail'
 import "./styles.css"
-import {getProduct} from "../../Mocks/fakeApi"
 import {useParams} from 'react-router-dom'
 import {BeatLoader} from "react-spinners";
 import {db} from "../../firebase/firebase";
