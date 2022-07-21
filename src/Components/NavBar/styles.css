@@ -98,3 +98,17 @@ a {
     flex-direction: row;
     align-items: center;
 }
+
+.cart-finish-button{
+    cursor:pointer;
+    width:180%;
+    height: 60%;
+    margin-top:12%;
+    background-color:var(--main-color);
+    color:white;
+    border-radius: 2rem;
+    font-style: italic;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
