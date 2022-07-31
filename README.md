@@ -16,6 +16,7 @@ Tienda virtual para comprar alimentos congelados
 * Se crea la vista del Cart
 * Dejo de usar la fakeApi y traigo los datos de productos con firebase
 * Creo orden de compra y la almaceno en firebase
+* Creo aviso de que la página no existe cuando se tipea mal en el navegador
 
 
 ## Tecnologías

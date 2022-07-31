@@ -20,12 +20,12 @@
     padding:1%;
     font-size:18px;
     text-align: center;
-    border:solid rgb(228, 219, 219);
+    border:solid rgb(228, 219, 219) 2px;
 }
 
 .card img{
-    width:60%;
-    height:auto;
+    width:200px;
+    height:200px;
 }
 
 .boton-detalle{

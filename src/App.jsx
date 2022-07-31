@@ -5,6 +5,7 @@ import ItemListContainer from "./Components/ItemListContainer/index";
 import NavBar from "./Components/NavBar/index"
 import Cart from "./Components/Cart/index"
 import CartCustomProvider from "./Context/CartContext";
+import PaginaNoEncontrada from "./Components/PaginaNoEncontrada";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
             <Route path="/category/:categoryId" element={<ItemListContainer/>} />
             <Route path="/detail/:id" element={<ItemDetailContainer />} />
             <Route path="/cart" element={<Cart />}/>
+            <Route path="*" element={<PaginaNoEncontrada />}/>
           </Routes>
         </CartCustomProvider>
       </BrowserRouter>

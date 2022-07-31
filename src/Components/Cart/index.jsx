@@ -3,7 +3,7 @@ import React, {useContext} from 'react'
 import { CartContext } from '../../Context/CartContext';
 import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { addDoc, collection } from "firebase/firestore"
+import { addDoc, collection, serverTimestamp } from "firebase/firestore"
 import { db } from "../../firebase/firebase";
 
 const Cart = () => {
@@ -11,19 +11,21 @@ const Cart = () => {
 
   const order = {
     buyer: {
-    name: "Julieta",
-    email: "julieta@gmail.com",
-    phone: "3512258102",
-    adress: "Olmos 5821"
+      name: "Julieta",
+      email: "julieta@gmail.com",
+      phone: "3512258102",
+      adress: "Olmos 5821",
+      date: serverTimestamp(),
     },
-    items: cart.map (product => ( { id:product.id, name:product.name, price:product.price, quantity:product.quantity } )),
-    total: totalPrice(),
+      items: cart.map (product => ( { id:product.id, name:product.name, price:product.price, quantity:product.quantity } )),
+      total: totalPrice(),
   }
 
   const finishPurchase = () =>{
       const ordersCollection = collection (db, "orders");
       addDoc (ordersCollection, order)
-      .then (({id}) => console.log(id))
+      .then (({id}) => console.log(id),
+      clear())
   }
 
   if (cart.length === 0){

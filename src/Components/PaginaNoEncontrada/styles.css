@@ -1,0 +1,12 @@
+p {
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.link-inicio{
+    color:red;
+    align-items: center;
+    margin:1%;
+}
