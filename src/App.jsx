@@ -6,6 +6,7 @@ import NavBar from "./Components/NavBar/index"
 import Cart from "./Components/Cart/index"
 import CartCustomProvider from "./Context/CartContext";
 import PaginaNoEncontrada from "./Components/PaginaNoEncontrada";
+import Checkout from "./Components/Checkout";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
             <Route path="/detail/:id" element={<ItemDetailContainer />} />
             <Route path="/cart" element={<Cart />}/>
             <Route path="*" element={<PaginaNoEncontrada />}/>
+            <Route path="/checkout/" element={<Checkout />} />
           </Routes>
         </CartCustomProvider>
       </BrowserRouter>
