@@ -1,0 +1,29 @@
+*{
+    --main-color:rgb(236, 114, 114);
+}
+
+.form{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.part-form{
+    display:flex;
+    flex-direction: column;
+    width:500px;
+    margin-top:2%;
+}
+
+.error-form{
+    color:red;
+    font-style: italic;
+}
+
+.button-pagar{
+    background-color: var(--main-color);
+    width:500px;
+    color:white;
+}
