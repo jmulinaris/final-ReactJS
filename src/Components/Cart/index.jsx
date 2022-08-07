@@ -3,27 +3,20 @@ import React, {useContext, useState, useEffect} from 'react'
 import { CartContext } from '../../Context/CartContext';
 import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { addDoc, collection, serverTimestamp } from "firebase/firestore"
-import { db } from "../../firebase/firebase";
-import Checkout, { finishPurchase } from "../Checkout";
-import Form from "../Form";
-import { useForm } from "../../Hooks/useForm";
+import Checkout from "../Checkout";
 
 const Cart = () => {
   const { cart, totalPrice, totalProducts, deleteProduct, clear } = useContext(CartContext);
 
   const [compraFinalizada, setCompraFinalizada] = useState(false);
 
+  const orderId = Checkout;
+
   const goCheckout = () =>{
     setCompraFinalizada(true);
   }
 
-  const goBack = () =>{
-    setCompraFinalizada(false);
-  }
-
-
-  if (cart.length === 0){
+  if (cart.length === 0 ){
     return (
       <>
         <h3 className="cart-title"> No hay productos en el carrito, comprá <Link className="cart-link" to="/"> acá </Link></h3>

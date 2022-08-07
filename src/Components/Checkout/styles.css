@@ -27,3 +27,15 @@
     width:500px;
     color:white;
 }
+
+.button-volver{
+    background-color: var(--main-color);
+    width:100px;
+    color:white;
+}
+
+.container-fin{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
