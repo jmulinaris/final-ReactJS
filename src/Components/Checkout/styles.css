@@ -8,6 +8,9 @@
     justify-content: space-between;
     align-items: center;
     text-align: center;
+    background-color: rgb(245, 237, 237);
+    margin:3% 35%;
+    border: solid rgb(228, 219, 219) 2px;
 }
 
 .part-form{
@@ -22,20 +25,45 @@
     font-style: italic;
 }
 
-.button-pagar{
+.button-form {
     background-color: var(--main-color);
-    width:500px;
+    width:150px;
     color:white;
+    cursor:pointer;
+    height: 30px;
+    border: solid rgb(129, 128, 128) 2px;
 }
 
-.button-volver{
+.buttons-form{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin:5% 15%;
+}
+
+.button-cerrar{
     background-color: var(--main-color);
-    width:100px;
+    width:150px;
     color:white;
+    cursor:pointer;
+    height: 30px;
+    margin-top:10%;
+    margin-bottom:10%;
+    border: solid rgb(129, 128, 128) 2px;
 }
 
 .container-fin{
     display:flex;
     flex-direction: column;
     align-items: center;
+    background-color: rgb(245, 237, 237);
+    margin:3% 35%;
+    border: solid rgb(228, 219, 219) 2px;
+}
+
+input{
+    height: 25px;
+    font-family: sans 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width:auto;
 }

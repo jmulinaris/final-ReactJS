@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useContext, createFactory} from 'react'
+import React, {useState, useContext} from 'react'
 import { addDoc, collection, serverTimestamp } from "firebase/firestore"
 import { db } from "../../firebase/firebase";
 import { CartContext } from '../../Context/CartContext';
@@ -17,12 +17,11 @@ const Checkout = () => {
 
     const {cart, totalPrice, clear } = useContext(CartContext);
     const [form, setForm] = useState(initialForm);
-    const {errors, setErrors} = useState({});
     const [orderId, setOrderId] = useState("");
 
     const buyer = form;
 
-    const {name, mail, verifMail} = buyer;
+    const {name, mail} = buyer;
 
     const handleChange = (e) =>{
         const {name, value} = e.target;
@@ -46,19 +45,9 @@ const Checkout = () => {
             total: totalPrice(),
         })
         .then (({id}) => setOrderId(id),
+        clear()
     )
-}
-
-//     useEffect(() => {
-//     if (orderId) {
-//         clear();
-//     }
-// }, [orderId]);
-
-    const handleBlur = (e) =>{
-        // handleChange(e);
-        // setErrors(validateForm(form));
-    };
+    }
 
     const handleSubmit = (e) =>{
         e.preventDefault();
@@ -71,55 +60,52 @@ const Checkout = () => {
             (
             <section>
                 <div className="form">
-                <h2>Formulario de compra</h2>
+                <h2>Completá tus datos para finalizar</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="part-form">
-                        <label>Nombre y apellido: </label>
                         <input
                         type="text"
                         name="name"
-                        placeholder="Nombre"
-                        onBlur = {handleBlur}
+                        placeholder="Ingresá tu nombre y apellido"
                         onChange = {handleChange}
                         required
                         />
                     </div>
                     <div className="part-form">
-                        <label>Celular: </label>
                         <input
                         type="number"
                         name="phone"
-                        placeholder="Celular"
-                        onBlur = {handleBlur}
+                        placeholder="Ingresá tu celular"
                         onChange ={handleChange}
                         required
                         />
                     </div>
                     <div className="part-form">
-                        <label>Correo electrónico: </label>
                         <input
                         type="email"
                         name="mail"
-                        placeholder="Correo electrónico"
-                        onBlur = {handleBlur}
+                        placeholder="Ingresá tu mail"
                         onChange ={handleChange}
                         required/>
                     </div>
                     <div className="part-form">
-                        <label>Repite el correo: </label>
                         <input
                         type="email"
                         name="verifmail"
-                        placeholder="Repite el correo electrónico"
-                        onBlur = {handleBlur}
+                        placeholder="Repetí tu mail"
                         onChange ={handleChange}
                         required
                         />
                     </div>
-                    <div className="part-form">
-                        <input className="button-pagar"
-                        type="submit"
-                        value="IR A PAGAR"/>
+                    <div className="buttons-form">
+                        <div>
+                            <input className="button-form"
+                            type="submit"
+                            value="IR A PAGAR"/>
+                        </div>
+                        <div>
+                            <button className="button-form"><Link to="/cart/">CANCELAR</Link></button>
+                        </div>
                     </div>
                 </form>
                 </div>

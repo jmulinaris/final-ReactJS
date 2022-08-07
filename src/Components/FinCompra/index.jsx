@@ -12,7 +12,7 @@ const FinCompra = ({name, mail, orderId}) => {
                 <p>ID de compra: {orderId}</p>
             </div>
             <div>
-                <button className="button-volver"><Link to="/">Cerrar</Link></button>
+                <button className="button-cerrar"><Link to="/">CERRAR</Link></button>
             </div>
         </section>
     )
