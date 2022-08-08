@@ -3,7 +3,7 @@ import CartWidget from "../CartWidget/index";
 import {Link} from "react-router-dom";
 import "./styles.css"
 
-const categories = [,
+const categories = [
     {
         id:1,
         path:"/category/pastas",
@@ -39,7 +39,7 @@ const NavBar = () =>{
                 <nav className="nav">
                     <ul className="nav__list">
                         {categories.map((category) => (
-                            <Link className="link" to={category.path} key={category.id}>{category.name}</Link>
+                        <Link className="link" to={category.path} key={category.id}>{category.name}</Link>
                         ))}
                     </ul>
                 </nav>
