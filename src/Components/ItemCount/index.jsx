@@ -25,7 +25,6 @@ const ItemCount = ({initial, stock, onAdd}) => {
                     <span className="numero">{count}</span>
                     <button className="counter-button" disabled={count >= stock} onClick={increase}>+</button>
             </section>
-                <p>({stock} disponibles)</p>
             </div>
             <div>
                 <button className="add-button" disabled={stock <= 0} onClick={()=> onAdd(count)}> <AddShoppingCartIcon className="addCarrito" fontSize="small"/>AGREGAR AL CARRITO</button>

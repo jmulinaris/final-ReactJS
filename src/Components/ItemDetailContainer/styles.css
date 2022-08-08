@@ -12,7 +12,7 @@
 
 .nombre-producto{
     color:rgb(224, 87, 87);
-    margin-top:5%;
+    margin-top:15%;
 }
 
 .detalle-producto{
@@ -50,6 +50,7 @@
 .numero{
     padding:8%;
     font-size:20px;
+    margin-bottom:5%;
 }
 
 .counter-button{
@@ -74,6 +75,7 @@
     align-items: center;
     margin:2%;
     cursor:pointer;
+    margin-top:30%;
 }
 
 .finish-button{
