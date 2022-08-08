@@ -11,6 +11,7 @@
     background-color: rgb(245, 237, 237);
     margin:3% 35%;
     border: solid rgb(228, 219, 219) 2px;
+    border-radius: 5px;
 }
 
 .part-form{
@@ -20,11 +21,6 @@
     margin-top:2%;
 }
 
-.error-form{
-    color:red;
-    font-style: italic;
-}
-
 .button-form {
     background-color: var(--main-color);
     width:150px;
@@ -32,6 +28,7 @@
     cursor:pointer;
     height: 30px;
     border: solid rgb(129, 128, 128) 2px;
+    border-radius: 5px;
 }
 
 .buttons-form{
@@ -40,6 +37,7 @@
     align-items: center;
     justify-content: space-between;
     margin:5% 15%;
+    border-radius: 5px;
 }
 
 .button-cerrar{
@@ -51,6 +49,7 @@
     margin-top:10%;
     margin-bottom:10%;
     border: solid rgb(129, 128, 128) 2px;
+    border-radius: 5px;
 }
 
 .container-fin{
@@ -60,10 +59,15 @@
     background-color: rgb(245, 237, 237);
     margin:3% 35%;
     border: solid rgb(228, 219, 219) 2px;
+    border-radius: 5px;
 }
 
 input{
     height: 25px;
     font-family: sans 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width:auto;
+    border:solid black 1px;
+    border-radius: 5px;
+    padding:1% 4%;
+    text-align: center;
 }

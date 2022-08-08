@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import ItemDetailContainer from "./Components/ItemDetailContainer";
 import ItemListContainer from "./Components/ItemListContainer/index";
 import NavBar from "./Components/NavBar/index"
@@ -10,7 +10,7 @@ import Checkout from "./Components/Checkout";
 
 const App = () => {
   return (
-      <BrowserRouter>
+      <HashRouter>
         <CartCustomProvider>
           <NavBar/>
           <Routes>
@@ -22,7 +22,7 @@ const App = () => {
             <Route path="/checkout/" element={<Checkout />} />
           </Routes>
         </CartCustomProvider>
-      </BrowserRouter>
+      </HashRouter>
   )
 }
 

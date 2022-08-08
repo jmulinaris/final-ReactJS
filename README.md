@@ -18,6 +18,8 @@ Tienda virtual para comprar alimentos congelados
 * Creo orden de compra y la almaceno en firebase
 * Creo aviso de que la página no existe cuando se tipea mal en el navegador
 * Creo componente de checkout
+* Agrego Local Storage
+* Configuro GitHub Pages
 
 
 ## Tecnologías
@@ -28,6 +30,7 @@ Teconologías utilizadas en el proyecto
 * [react-router-dom]: Version 6.3.0
 * [react-spinners]: Version 0.13.2
 * [firebase]: Version 9.9.0
+* [github pages]: Version 4.0.0
 
 ## Instalación
 ***

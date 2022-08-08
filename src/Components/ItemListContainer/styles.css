@@ -21,6 +21,7 @@
     font-size:18px;
     text-align: center;
     border:solid rgb(228, 219, 219) 2px;
+    border-radius: 5px;
 }
 
 .card img{
@@ -31,6 +32,7 @@
 .boton-detalle{
     border-radius: 2%;
     border: solid rgb(174, 164, 230);
+    border-radius: 5px;
     padding:0.5%;
     color:white;
     background-color: rgb(127, 110, 228);
