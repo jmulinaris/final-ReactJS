@@ -1,5 +1,5 @@
 import React, {useState, useContext} from 'react'
-import { addDoc, collection, serverTimestamp } from "firebase/firestore"
+import { addDoc, collection, serverTimestamp, doc, updateDoc } from "firebase/firestore"
 import { db } from "../../firebase/firebase";
 import { CartContext } from '../../Context/CartContext';
 import "./styles.css";
@@ -47,6 +47,10 @@ const Checkout = () => {
         .then (({id}) => setOrderId(id),
         clear()
     )
+        cart.forEach((product) => {
+        const updateCollection = doc(db, "productos", product.id);
+        updateDoc(updateCollection, { stock: product.stock - product.quantity });
+    });
     }
 
     const handleSubmit = (e) =>{
