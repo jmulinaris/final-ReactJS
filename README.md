@@ -1,4 +1,4 @@
-##FRÖZEN E-Commerce
+## FRÖZEN E-Commerce
 ***
 **Coder House: Proyecto final de React JS**
 
@@ -26,6 +26,7 @@ Venta de alimentos congelados.
 ***
 Teconologías utilizadas en el proyecto
 * [react]: Version 18.1.0
+* [material-icon]: Version 5.8.4
 * [react-dom]: Version 18.1.0
 * [react-router-dom]: Version 6.3.0
 * [react-spinners]: Version 0.13.2
